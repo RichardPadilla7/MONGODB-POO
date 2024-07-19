@@ -22,10 +22,8 @@ public class Main {
 
         //leer
         try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
-
             MongoDatabase database = mongoClient.getDatabase("miBaseDeDatos");
             MongoCollection<Document> collection = database.getCollection("miColeccion");
-
             FindIterable<Document> documentos = collection.find();
 
             for (Document documento : documentos) {
