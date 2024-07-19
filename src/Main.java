@@ -21,7 +21,6 @@ public class Main {
         }
 
         //leer
-
         try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
 
             MongoDatabase database = mongoClient.getDatabase("miBaseDeDatos");
@@ -53,7 +52,6 @@ public class Main {
 
         //borrar
         try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
-
             MongoDatabase database = mongoClient.getDatabase("miBaseDeDatos");
             MongoCollection<Document> collection = database.getCollection("miColeccion");
             Document filtro = new Document("nombre", "Juan");
